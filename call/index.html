@@ -10,9 +10,10 @@
 <p>I should have redirected you to make a call to <a id="test"></a>.</p>
 
 <script>
-var param = new URLSearchParams(window.location.search);
+var param = new URLSearchParam
+var number = param.toString();
+number = number.substring(0,number.length-1);
 
-var number = param.get('number');
 var out = "0; URL='callto:"+number+"'"
 
 document.getElementById("meta").content = out
