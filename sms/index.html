@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Hello World</h1>
-<p>I should have redirected you to make a call to <a id="test"></a>.</p>
+<p>I should have redirected you to make a text to <a id="test"></a>.</p>
 
 <script>
 var param = new URLSearchParams(window.location.search);
@@ -16,6 +16,7 @@ var number = param.get('number');
 var out = "0; URL='sms:"+number+"'"
 
 document.getElementById("meta").content = out
+document.getElementById("test").innerHTML = number
 </script
 
 </body>
