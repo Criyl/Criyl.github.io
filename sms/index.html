@@ -15,10 +15,11 @@ var param = new URLSearchParams(window.location.search);
 var number = param.toString();
 number = number.substring(0,number.length-1);
 
-var out = "0; URL='sms:"+number+"'"
+var out = "0; URL='sms:"+number+"'";
 
-document.getElementById("meta").content = out
-document.getElementById("test").innerHTML = number
+document.getElementById("meta").content = out;
+document.getElementById("test").innerHTML = number;
+settimeout('self.close()',5000);
 </script
 
 </body>
