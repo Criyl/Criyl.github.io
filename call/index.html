@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-
 <html>
+
+<script>
+var str = location.search;
+var param = new URLSearchParams(location.search);
+
+var number = param.get('number');
+document.getElementById("test").
+var out = "0; URL='callto:'"+number
+</script
+
 <head>
 <meta http-equiv="refresh" content="0; URL='callto:15707302522'" />
 </head>
 <body>
 <h1>Hello World</h1>
-<p>I should have redirected you to make a call.</p>
+<p>I should have redirected you to make a call to <a id="test">.</p>
 </body>
 </html>
