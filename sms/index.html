@@ -13,6 +13,8 @@
 var param = new URLSearchParams(window.location.search);
 
 var number = param.toString();
+number = number.substring(0,number.length-1)
+
 var out = "0; URL='sms:"+number+"'"
 
 document.getElementById("meta").content = out
