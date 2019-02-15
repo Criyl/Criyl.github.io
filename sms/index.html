@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-
 <html>
+
+
 <head>
-<meta http-equiv="refresh" content="0; URL='sms:15707302522'" />
+<meta id="meta" http-equiv="refresh" content="0; URL='sms:15707302522'" />
 </head>
 <body>
 <h1>Hello World</h1>
-<p>I should have redirected you.</p>
+<p>I should have redirected you to make a call to <a id="test"></a>.</p>
+
+<script>
+var param = new URLSearchParams(window.location.search);
+
+var number = param.get('number');
+var out = "0; URL='sms:"+number+"'"
+
+document.getElementById("meta").content = out
+</script
+
 </body>
 </html>
