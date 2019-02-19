@@ -14,10 +14,12 @@ var param = new URLSearchParam
 var number = param.toString();
 number = number.substring(0,number.length-1);
 
-var out = "0; URL='callto:"+number+"'"
+var out = "URL='callto:"+number+"'"
 
-document.getElementById("meta").content = out
+document.getElementById("meta").content = "0;"+out
 document.getElementById("test").innerHTML = number
+out = out.substring(5,out.length-1);
+document.getElementById("test").href =  out;
 </script
 
 </body>
