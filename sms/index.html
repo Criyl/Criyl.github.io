@@ -19,7 +19,8 @@ var out = "URL='sms:"+number+"'";
 
 document.getElementById("meta").content = "0;"+out;
 document.getElementById("test").innerHTML = number;
-document.getElementById("test").href =  out
+out = out.substring(5,out.length-1);
+document.getElementById("test").href =  out;
 </script
 
 </body>
