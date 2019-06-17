@@ -9,9 +9,10 @@ body{
     font-family:'Monserrat';
 }
 
-seg{
-    position:inherit;
-    
+div{
+    display: inline-block;
+    position:relative;
+    width:30%;
     height: 20%;
     color:black; 
     background-color: white;
