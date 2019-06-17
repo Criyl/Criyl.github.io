@@ -2,7 +2,8 @@
 <html>
 <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 <link href="assets/css/animate.css" rel="stylesheet" type="text/css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
 <body>
     <br>
         <div align=center style="width:35%;">
@@ -26,7 +27,7 @@
             
             <br><br>
             <input id="out" type="text" name="out" style="width:50%" disabled>
-            <button onclick="copy_link()">Copy</button>
+            <button onclick="copyToClipboard('#out')">Copy</button>
             <script>
                 
                 function process(){
@@ -36,13 +37,19 @@
                     
                     output.value = "http://criyl.github.io/"+drop.value+"/?"+input.value;
                 }
-                 function copy_link(){
-                    var output = document.getElementById("out");
-                    output.select();
-                    document.execCommand("copy");
-
-                    alert("Copied: " + output.value);
+                
+                function copyToClipboard(element) {
+                  var $temp = $("<input>");
+                  $("body").append($temp);
+                  var output = document.getElementById("out");
+                  $temp.val(output.value).select();
+                
+                  document.execCommand("copy");
+                  $temp.remove();
+                    
+                  alert("Copied");
                 }
+                
             </script>
         </p>
         </div>
