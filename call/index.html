@@ -9,15 +9,16 @@
 <h1>OOPSIE :C</h1>
 <p>I should have redirected you to make a call to <a id="test"></a>.</p>
 
-<script>
-var param = new URLSearchParam
+<script type="text/javascript">
+var param = new URLSearchParams(window.location.search);
+
 var number = param.toString();
 number = number.substring(0,number.length-1);
 
-var out = "URL='callto:"+number+"'"
+var out = "URL='sms:"+number+"'";
 
-document.getElementById("meta").content = "0;"+out
-document.getElementById("test").innerHTML = number
+document.getElementById("meta").content = "0;"+out;
+document.getElementById("test").innerHTML = number;
 out = out.substring(5,out.length-1);
 document.getElementById("test").href =  out;
 </script
