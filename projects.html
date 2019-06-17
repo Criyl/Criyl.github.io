@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+<link href="assets/css/animate.css" rel="stylesheet" type="text/css">
+
+<body>
+    <br>
+        <div align=center style="width:35%;">
+        <h1>SMS and CALL rerouting</h1>
+        <img src='assets/imgs/android-round.png' style="width:50%">
+        <h4 id="test" style="width:80%"> 
+            A small project created to circumvent issues caused by programs or website builders that support hyperlinking but do not support the "callto:" or "sms:" references.
+        </h4>
+        <p>
+            Usage:
+            <br>
+            http://criyl.github.io/
+            <select id="sel" name="type">
+                <option value="sms">sms</option>
+                <option value="call">call</option>
+            </select>
+            /?
+            <input id="in" type="text" name="in" style="width:20%" value="<phone#>">
+            <br>
+            <button onclick="process()">Submit</button>
+            
+            <br><br>
+            <input id="out" type="text" name="out" style="width:50%" disabled>
+            <button onclick="copy_link()">Copy</button>
+            <script>
+                
+                function process(){
+                    var input = document.getElementById("in");
+                    var drop = document.getElementById("sel");
+                    var output = document.getElementById("out");
+                    
+                    output.value = "http://criyl.github.io/"+drop.value+"/?"+input.value;
+                }
+                 function copy_link(){
+                    var output = document.getElementById("out");
+                    output.select();
+                    document.execCommand("copy");
+
+                    alert("Copied: " + output.value);
+                }
+            </script>
+        </p>
+        </div>
+    
+    
+</body>
+<script src="assets/js/anime.min.js"></script>
+<script src="assets/js/index.js"></script>
+</html>
+
