@@ -1,0 +1,20 @@
+@import url(https://reset5.googlecode.com/hg/reset.min.css);
+@import url(https://fonts.googleapis.com/css?family=Nixie+One|Open+Sans:700italic,400,700|Open+Sans+Condensed:300,300italic,700|Slabo+13px);
+
+
+body{
+    margin:0;
+    text-align: center;
+    background-color: azure;
+    font-family:'Monserrat';
+}
+
+seg{
+    position:inherit;
+    
+    height: 20%;
+    color:black; 
+    background-color: white;
+    z-index:2;
+    box-shadow:0px 3px 5px grey;
+}
