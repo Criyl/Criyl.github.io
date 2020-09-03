@@ -56,7 +56,7 @@ function showSecond(id){
         areaRect = area.getBoundingClientRect();
         middle = [areaRect.x+areaRect.width/2,areaRect.y+areaRect.height/2]
         relativepos = [cursor[0]-middle[0],cursor[1]-middle[1]]
-        document.getElementById("debugsecond").innerText = "("+(relativepos[0])+","+(relativepos[1])+") "+"\n timedelta: "+timedelta
+        document.getElementById("debugsecond").innerText = "("+(relativepos[0].toPrecision(3))+","+(relativepos[1].toPrecision(3))+") "+"\n timedelta: "+timedelta.toPrecision(3)
         plane.setRotationFromAxisAngle( new THREE.Vector3(0,1,0), Math.atan((relativepos[0])/distancetosubject))
         plane.rotateOnAxis( new THREE.Vector3(1,0,0), Math.atan((relativepos[1])/distancetosubject))
 

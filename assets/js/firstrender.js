@@ -100,7 +100,7 @@ function showFirst(id){
         }
         count += direction*timedelta;
 
-        document.getElementById("debugfirst").innerText = "count: "+count+"\n timedelta: "+timedelta
+        document.getElementById("debugfirst").innerText = "count: "+count.toPrecision(3)+"\n timedelta: "+timedelta.toPrecision(3)
         cube1.rotation.x += Math.abs(timedelta);
         cube3.rotation.y += Math.abs(timedelta);
         distancefromsubject -= 3*direction*timedelta
