@@ -3,7 +3,8 @@
 
 <script src="assets/js/three.js"></script>
 <script src="assets/js/firstrender.js"></script>
-<link rel="stylesheet" href="assets/css/styles.css">
+<script src="assets/js/secondrender.js"></script>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
 <head>
     <meta charset="utf-8">
@@ -14,11 +15,39 @@
 
 <body>
 <center>
-        <div id="webgl" style="width:75%;height:75%;">
-            <script>
-                show('webgl');
-            </script>
+<div style="width:25%;height:25%;">
+<h1>
+WebGL Tests
+</h1>
+
 </div>
+<br>
+        <div style="width:25%;height:25%;">
+			<center>
+			<p id="debugfirst" >
+
+			</p>
+			<div id="webgl" style="width:100%;margin:0;padding:0%;z-index:3; box-shadow:0px 0px 0px;">
+			
+			</div>
+			<center>
+            <script>
+                showFirst('webgl');
+            </script>
+		</div>
+		<div style="width:25%;height:25%;">
+			<center>
+			<p id="debugsecond" >
+
+			</p>
+			<div id="webgl2" style="width:100%;margin:0;padding:0%;z-index:3; box-shadow:0px 0px 0px;">
+			
+			</div>
+			<center>
+            <script>
+                showSecond('webgl2');
+            </script>
+		</div>
 <center>
 
 </body>
